@@ -1,6 +1,9 @@
 extends partial/layout
 
 block content
+  //  说明：这个文件整体是一个pug模板
+    // 用html的注释，括住了一个mustache的控制标签
+    // gulpfile中的自定义task会把「注释符号」去掉
   <!--{{#thumbnail}}-->
   .banner.article.mb-2(style="background-image: url({{thumbnail}})")
   <!--{{/thumbnail}}-->

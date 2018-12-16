@@ -28,6 +28,7 @@ gulp.task('watch', () => {
   gulp.watch('stylus/**/*.styl', gulp.parallel('stylus'));
 });
 
+//  用于将pug模板中的注释，转为mustache标签
 gulp.task('template', async () => {
   const content = await readFile(path.resolve(__dirname, 'html/homepage.html'), 'utf8');
   let [header, body, footer] = content.split('<!--split-->');
