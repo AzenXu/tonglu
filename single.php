@@ -8,9 +8,11 @@
  * Time: 下午2:10
  */
 
-get_header();
+// 页面都是这么写的：头部、身体、脚，最后输出一个完整的文章
 
-if (have_posts()) {
+get_header(); // 渲染页面头部
+
+if (have_posts()) { // 读文章部分的内容 - 参考其他主题的实现就好
   while (have_posts()) {
     the_post();
 
@@ -38,9 +40,9 @@ if (have_posts()) {
 }
 
 
-$tpl = new Mustache_Engine();
+$tpl = new Mustache_Engine();   // 模板渲染
 $template = dirname(__FILE__) . '/template/single.html';
 $template = file_get_contents($template);
-echo $tpl->render($template, $blog);
+echo $tpl->render($template, $blog); // 数据渲染到字符上，做输出
 
-get_footer();
+get_footer(); // 渲染页面尾部

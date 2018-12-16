@@ -10,6 +10,8 @@ WordPress 主题
 
 ## 使用说明
 1. composer.json安装依赖
+2. 到ui-src下npm install
+3. npm run stylus 生成wordpress的style.css
 
 
 
@@ -21,3 +23,12 @@ WordPress 主题
     3. 依赖的包写在了composer.json中
         1. 这里只依赖了mustache
         2. 安装依赖之后，会生成vendor目录，安装依赖的包
+3. 写页面的不同部分
+    1. header.php
+
+
+## wordpress页面组成
+1. 不变的
+    1. header - 顶部的一条 - logo + 导航
+    2. footer
+2. 变化的
