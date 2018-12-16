@@ -9,7 +9,7 @@
  * Time: 下午10:52
  */
 
-require_once 'vendor/autoload.php';
+require_once 'vendor/autoload.php'; // 说明：加载通过composer依赖的php包
 
 /**************************************
  *
