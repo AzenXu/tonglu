@@ -8,6 +8,8 @@
  * Time: 上午12:25
  */
 
+// 当你要访问的页面不存在的时候，会落到这个页面做兜底
+
 $is_house_list = get_query_var('house_category') === '0';
 if ($is_house_list) {
   add_filter('body_class', function ($classes) {
